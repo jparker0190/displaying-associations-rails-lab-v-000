@@ -1,6 +1,6 @@
 class Song < ActiveRecord::Base
   belongs_to :artist
   def artist_name
-    @artist.name
+    Song.find(@artist.name)
   end
 end
